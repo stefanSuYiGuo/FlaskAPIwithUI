@@ -6,7 +6,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     title = 'Flask Web App'
-    return render_template('index.html', title=title)
+    paragraphs = [
+        'Section 1',
+        'Section 2',
+        'Section 3'
+    ]
+    return render_template('index.html', title=title, data=paragraphs)
 
 
 if __name__ == '__main__':
