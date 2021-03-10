@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "bootstrap/base.html" %}
+{% block title %}
     {% if title %}
         <title>{{title}}</title>
     {% else %}
         <title>Flask Default Title</title>
     {% endif %}
-</head>
-<body>
-<!--    <h3><a href="/">Flask App</a> </h3>-->
-<!--    <hr>-->
-    {% include 'navbar.html' %}
+{% endblock %}
 
-    {% block content %}
-<!--        <h1>Parent template</h1>-->
-    {% endblock %}
-</body>
-</html>
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% block app_content %}
+        {% endblock %}
+    </div>
+{% endblock %}
