@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-        <title>{{title}}</title>
-    {% else %}
-        <title>Flask Default Title</title>
-    {% endif %}
-</head>
-<body>
-    <h1>Hello World</h1>
-    <p>Flask is amazing</p>
-    {% for p in data %}
-    <p>{{p}}</p>
-    {% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>{{title}}</p>
+{% endblock %}
