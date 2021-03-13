@@ -1,9 +1,13 @@
 {% extends "bootstrap/base.html" %}
+{% block styles %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="{{bootstrap_find_resource('css/bootstrap.css', cdn='bootstrap')}}" rel="stylesheet">
+{% endblock %}
 {% block title %}
     {% if title %}
-        <title>{{title}}</title>
+        {{title}} | Flask App
     {% else %}
-        <title>Flask Default Title</title>
+        Flask App
     {% endif %}
 {% endblock %}
 
