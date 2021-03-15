@@ -5,6 +5,9 @@ class Config(object):
 
     # # RECAPTCHA_PUBLIC_KEY
     # RECAPTCHA_PUBLIC_KEY = 'A-VERY-LONG-RECAPTCHA-PUBLIC-KEY'
+    #
+    # # RECAPTCHA_PRIVATE_KEY
+    # RECAPTCHA_PRIVATE_KEY = 'A-VERY-LONG-RECAPTCHA-PRIVATE-KEY'
 
     # Database configuration
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + "E:/Moses/College_Life/Year3_2/Software_Development_Workshop_III/Code/practice2/app.db"

@@ -27,7 +27,10 @@ def index():
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        pass
+        username = form.username.data
+        email = form.email.data
+        password = form.password.data
+        print(username, email, password)
     return render_template('register.html', form=form)
 
 
