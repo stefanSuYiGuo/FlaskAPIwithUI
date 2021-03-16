@@ -1,18 +1,8 @@
 from flask import Flask, render_template, flash
-from flask_bootstrap import Bootstrap
-from flask_sqlalchemy import SQLAlchemy
-from flask_bcrypt import Bcrypt
 
-from config import Config
+from app import app, bcrypt, db
 from forms import RegisterForm
 from models import User
-
-app = Flask(__name__)
-bootstrap = Bootstrap(app=app)
-db = SQLAlchemy(app)
-bcrypt = Bcrypt(app)
-
-app.config.from_object(Config)
 
 
 @app.route('/')
@@ -40,7 +30,3 @@ def register():
         db.session.commit()
         flash('Congrats, registration success', category='success')
     return render_template('register.html', form=form)
-
-
-if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5000)
