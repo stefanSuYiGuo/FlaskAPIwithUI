@@ -8,6 +8,8 @@ This is a project for practice, which includes the display of usage of Flask API
 2. `{% if ... %}`, `{% else %}`, `{% endif %}`; `{% include 'navbar.html' %}`; `{% block content %}`, `{% endblock %}`
 3. Double direction bind - using `{{ xxx }}`
 4. Using `flask_bootstrap` package is productive. (`pip install flask_bootstrap`)
+5. Get flash message using `{% with messages = get_flashed_messages(with_categories=True) %}` (ref: flask.pocoo.org/docs/1.0/patterns/flashing/)
+6. 
 
 > Back-end Notes
 1. Fix circular import problem.
