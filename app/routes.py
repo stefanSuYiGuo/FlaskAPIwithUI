@@ -1,8 +1,8 @@
 from flask import Flask, render_template, flash
 
 from app import app, bcrypt, db
-from forms import RegisterForm
-from models import User
+from app.forms import RegisterForm
+from app.models import User
 
 
 @app.route('/')
