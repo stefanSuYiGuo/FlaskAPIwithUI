@@ -1,4 +1,11 @@
-from app import db
+from flask_login import UserMixin
+
+from app import db, login
+
+
+@login.user_loader
+def load_user(id):
+    return User.get(id)
 
 
 class User(db.Model):
