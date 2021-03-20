@@ -26,6 +26,9 @@
 
     <div class="collapse navbar-collapse" id="navbarToggle">
       <ul class="nav navbar-nav navbar-right">
+        <li class="{% if request.endpoint == 'login' %}active{% endif %}">
+          <a href="{{ url_for('login') }}">Login</a>
+        </li>
         <li class="{% if request.endpoint == 'register' %}active{% endif %}">
           <a href="{{ url_for('register') }}">Register</a>
         </li>
