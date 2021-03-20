@@ -1,7 +1,7 @@
 from flask import Flask, render_template, flash, redirect, url_for
 
 from app import app, bcrypt, db
-from app.forms import RegisterForm
+from app.forms import RegisterForm, LoginForm
 from app.models import User
 
 
@@ -31,3 +31,12 @@ def register():
         flash('Congrats, registration success', category='success')
         return redirect(url_for('index'))
     return render_template('register.html', form=form)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        pass
+    return render_template('login.html', form=form)
+
