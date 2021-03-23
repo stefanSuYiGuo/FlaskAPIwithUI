@@ -10,7 +10,7 @@ class RegisterForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired(), Length(min=8, max=20)])
     confirm = PasswordField('Repeat password', validators=[DataRequired(), EqualTo('password')])
-    recaptcha = RecaptchaField()
+    # recaptcha = RecaptchaField()
     submit = SubmitField('Register')
 
     # The way to name the function must be validate_xxx. And xxx here must be a variable in RegisterForm class
